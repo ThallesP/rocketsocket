@@ -4,14 +4,14 @@ type User = Document & {
   email: String;
   socket_id: String;
   name: String;
-  avatar_url: String;
+  avatar: String;
 };
 
 const UserSchema = new Schema({
   email: String,
   socket_id: String,
   name: String,
-  avatar_url: String,
+  avatar: String,
 });
 
 const User = mongoose.model<User>("Users", UserSchema);
