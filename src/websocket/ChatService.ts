@@ -49,7 +49,10 @@ io.on("connect", (socket) => {
       room = await createChatRoomService.execute([data.idUser, userLogged._id]);
     }
 
-    console.log(room);
-    callback(room);
+    callback({ room });
+  });
+
+  socket.on("message", (data) => {
+    console.log(data);
   });
 });
