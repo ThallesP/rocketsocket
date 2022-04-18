@@ -14,8 +14,4 @@ app.use(express.static(process.cwd() + "/public"));
 
 const io = new Server(server);
 
-io.on("connection", (socket) => {
-  console.log(socket.id);
-});
-
 export { server, io };
